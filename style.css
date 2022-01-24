@@ -1,0 +1,429 @@
+*{
+    font-family: 'Fira Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #f0f0f0;
+    position: relative;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+i{
+    cursor: pointer;
+}
+img{
+    cursor: pointer;
+}
+.flex-box{
+    display: flex;
+    align-items: center;
+}
+/*;---------------------------------First Part: Header----------------------------*/
+header{
+    background: #fff;
+    height: 60px;
+    padding: 10px 2%;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.left-part .fas{
+    font-size: 24px;
+    margin-right: 30px;
+}
+.left-part .fab{
+    font-size: 24px;
+    color: red;
+}
+.left-part span{
+    font-weight: 600;
+    color: black;
+    margin-left: 4px;
+}
+
+.center-part .search-bar{
+    border: 1px solid #d4d4d4;
+    margin-right: 20px;
+    height: 35px;
+    width: 500px;
+    border-radius: 2px;
+    outline: none;
+}
+.center-part .search-bar input{
+    width: 85%;
+    height: 100%;
+    border: 0 solid #d4d4d4;
+    font-size: 16px;
+    padding: 0 10px;
+    outline: none;
+}
+.center-part .search-bar .search-button{
+    width: 15%;
+    height: 100%;
+    background: #f0f0f0;
+    border: 0 solid #d4d4d4;
+    font-size: 20px;
+    outline: none;
+}
+.center-part .mic{
+    font-size: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+}
+.right-part i{
+    font-size: 24px;
+    margin-right: 24px;
+}
+/*----------------------------@nd PART: SIDE BAR--------------------------*/
+.side-bar{
+    width: 14%;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    left: 0;
+    top: 80px;
+    padding-top: 0;
+    white-space: nowrap;
+    overflow-y: scroll;
+    z-index: 1;
+}
+.side-bar .menu-item{
+    padding: 7px;
+    margin: 4%;
+}
+
+.side-bar i{
+    font-size: 22px;
+    width: 40px;
+    padding: 10px;  
+}
+.side-bar .menu-item:hover{
+    background-color: #d4d4d4;
+    cursor: pointer;
+}
+hr{
+    border: 0;
+    border-bottom: 1px solid #d4d4d4;
+    margin: 15px 0;
+}
+::-webkit-scrollbar{
+    width: 6px;
+}
+::-webkit-scrollbar-track{
+    background: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background: #bbbbbb;
+    border-radius: 10px;
+}
+.r-sidebar{
+    width: 4%;
+}
+/*--------------------------3rd PART: PAGE CONTENT----------------------------*/
+.videos-container{
+    padding-left: 15%;
+    padding-right: 1%;
+    padding-top: 20px;
+}
+.all-videos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-column-gap: 15px;
+    grid-row-gap: 30px;
+    margin-top: 10px;
+}
+.single-video .thumb{
+    width: 100%;
+    border-radius: 2%;
+}
+.single-video .flex-box img{
+    border-radius: 50%;
+    width: 35px;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+.single-video .flex-box{
+    align-items: flex-start;
+    margin-top: 6px;
+}
+.video-details{
+    font-size: 14px;
+    color: #6a6a6a;
+}
+.video-details a{
+    font-weight: 600;
+    display:block;
+}
+.wide-videos-container{
+    padding-left: 5%;
+}
+/*----------------------------------MAKE IT RESPONSIVE-------------------*/
+@media(max-width:800px){
+    .left-part .fas{
+        font-size: 20px;
+        margin-right: 8px;
+        margin-left: 4px;
+    }
+    .left-part .fab{
+        font-size: 20px;
+    }
+    .center-part .search-bar{
+        width: fit-content;
+        margin-left: 5%;
+    }
+    .center-part .search-bar .search-button{
+        width: 25px;
+        font-size: 18px;
+        padding: 5px;
+    }
+    .center-part .mic{
+        display: none;
+    }
+    .right-part i{
+        display: none;
+    }
+    .right-part .fa-user{
+        display: block;
+        font-size: 20px;
+        margin-right: 4px;
+    }
+    .side-bar{
+        height: 100%;
+        width: 150px;
+    }
+    .side-bar .menu-item{
+        padding: 2px;
+    }
+    .side-bar i{
+        font-size: 20px;
+        width: 22px;
+        padding: 5px;
+    }
+    .r-sidebar{
+        width:0;
+    }
+    .videos-container{
+        padding-left: 3%;
+    }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1200px) {
+    .left-part .fas{
+        font-size: 20px;
+        margin-right: 8px;
+        margin-left: 1px;
+    }
+    .left-part .fab{
+        font-size: 20px;
+        margin-right: 7px;
+    }
+    
+    .center-part .mic{
+        margin-right: 2%;
+    }
+    
+    .side-bar{
+        height: 100%;
+        width: 150px;
+    }
+    .side-bar i{
+        font-size: 20px;
+        width: 22px;
+        padding: 5px;
+        padding-left: 0;
+        margin-left: 1px;
+    }
+    .r-sidebar{
+        width: 41px;
+    }
+    .right-part i{
+        font-size: 20px;
+        margin-right: 15px;
+    }
+    .right-part .fa-th{
+        display:none;
+    }
+    .videos-container{
+        padding-left: 3%;
+    }
+}
+
+/*--------------------------------The Video Page---------------------*/
+.V-container{
+    padding: 1% 5%;
+}
+.two-parts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.runningvideo{
+    flex-basis: 66%;
+}
+
+.sugesstedvideo{
+    flex-basis: 32%;
+}
+.runningvideo video{
+    width: 100%;
+}
+.runningvideo .video-information{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+.video-information p{
+    color: #6a6a6a;
+}
+.runningvideo .video-information i{
+    font-size: 18px;
+    font-weight: 600;
+    padding: 8px;
+}
+.runningvideo .video-information span{
+    padding: 2px;
+    font-size: 18px;
+}
+.youtuber{
+    display: flex;
+    align-items: center;
+}
+.youtuber img{
+    border-radius: 50%;
+    width: 45px;
+    margin-right: 12px;
+}
+.youtuber p{
+    font-size: 18px;
+    font-weight: 600;
+}
+.youtuber span{
+    color: #6a6a6a;
+}
+.youtuber div{
+    flex: 0.98;
+}
+.youtuber button{
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    background: red;
+    padding: 10px 25px;
+    font-size: 16px;
+}
+.video-description{
+    margin: 10px 0;
+    padding-left: 60px;
+    line-height: 30px;
+}
+.video-comments{
+    padding: 2%;
+}
+.video-comments span{
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.add-comments{
+    display: flex;
+    align-items: center;
+    margin: 30px 5px;
+}
+.add-comments img{
+    border-radius: 50%;
+    width: 40px;
+    margin-right: 12px;
+}
+.add-comments input{
+    width: 100%;
+    height: 25px;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #d4d4d4;
+    background: none;
+}
+.other-comments{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+.other-comments h3{
+    font-size: 15px;
+    font-weight: 600;
+}
+.other-comments h3 span {
+    font-size: 15px;
+    font-weight: 500;
+    color: #6a6a6a;
+}
+.other-comments img{
+    border-radius: 50%;
+    width: 40px;
+    margin-right: 12px;
+}
+.other-comments p{
+    font-size: 15px;
+    padding-top: 5px;
+    margin-right: 25px;
+}
+.react-comment{
+    display:flex;
+    align-items: center;
+    font-size: 15px;
+    margin: 10px 0;
+}
+.react-comment i{
+    padding: 0 10px;
+}
+.react-comment span{
+    font-weight: 500;
+    padding: 0 10px;
+}
+.single{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
+.single img{
+    width: 100%;
+    border-radius: 2px;
+}
+.single .thumbnail{
+    flex-basis: 50%;
+}
+.single .video-details{
+    flex-basis: 49%;
+}
+
+@media(max-width:700px){
+    .runningvideo{
+        flex-basis: 100%;
+    }
+    .sugesstedvideo{
+        flex-basis: 0%;
+    }
+    .single{
+        display: none;
+    }
+    .youtuber button{
+        padding: 2% 4%;
+        font-size: 89%;
+    }
+    .runningvideo .video-information i{
+        font-size: 14px;
+    }
+    .runningvideo .video-information span{
+        font-size: 14px;
+    }
+}
